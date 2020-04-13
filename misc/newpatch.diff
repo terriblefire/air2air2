@@ -1,0 +1,159 @@
+2c2
+< ; ----------------------------< HARDWARE EQUATES >---------------------------------
+---
+> ; ----------------------------< HARDWARE EQUATES >-----------------------------
+5,6c5,6
+< 		include	boot:project1/sourcecode/what_key.s ; include file of all the key equates. AND NO I DID`NT TYPE THEM IN. I STOLE IT.
+< 		include	boot:project1/sourcecode/hardware.i ; include file of all the key equates. AND NO I DID`NT TYPE THEM IN. I STOLE IT.
+---
+> 		include	include/what_key.i ; include file of all the key equates. AND NO I DID`NT TYPE THEM IN. I STOLE IT.
+> 		include	include/hardware.i ; include file of all the key equates. AND NO I DID`NT TYPE THEM IN. I STOLE IT.
+54,57c54,57
+< sprites		incbin	boot:project2/graphix/sprites_data.bin
+< sprite_info_structure	incbin	boot:project2/graphix/sprites_info.bin
+< song1		incbin	boot:project2/music/air2air.mod
+< song2		incbin	boot:project2/music/air2air2.mod
+---
+> sprites		incbin	data/sprites_data.bin
+> sprite_info_structure	incbin	data/sprites_info.bin
+> song1		incbin	music/air2air.mod
+> song2		incbin	music/air2air2.mod
+1310c1310
+< back?		dc.w	1
+---
+> backQuest		dc.w	1
+2400c2400
+< 		dc.b	"h\\\\\\\\\\\\\\\\\\\d",cr
+---
+> 		dc.b	"h-------------------d",cr
+2402c2402
+< 		dc.b	"h\\\\\\\\\\\\\\\\\\\d",cr
+---
+> 		dc.b	"h-------------------d",cr
+2411c2411
+< 		dc.b	"h\\\\\\\\\\\\\\\\\\\d",cr
+---
+> 		dc.b	"h-------------------d",cr
+2420c2420
+< 		dc.b	"h\\\\\\\\\\\\\\\\\\\d",cr
+---
+> 		dc.b	"h-------------------d",cr
+2455c2455
+< font		incbin	fonts:sys_font.bin
+---
+> font		incbin	data/sys_font.bin
+2650c2650
+< 		include	boot:project1/sourcecode/replay.s ; music player
+---
+> 		include	music/replay.s ; music player
+2654c2654
+< 		include	boot:project2/sourcecode/menu.i
+---
+> 		include	include/menu.i
+3167c3167
+< monitor		tst.w	timer?
+---
+> monitor		tst.w	timerQuest
+3361c3361
+< 		not.s	seed
+---
+> 		not	seed
+3575c3575
+< .yako		tst.w	grav?
+---
+> .yako		tst.w	gravQuest
+3885c3885
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+3942c3942
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+3983c3983
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4046c4046
+< .yako		tst.w	grav?
+---
+> .yako		tst.w	gravQuest
+4352c4352
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4408c4408
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4448c4448
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4510c4510
+< .yako		tst.w	grav?
+---
+> .yako		tst.w	gravQuest
+4818c4818
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4872c4872
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+4913c4913
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+5138c5138
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+5378c5378
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+5611c5611
+< 		tst.w	grav?
+---
+> 		tst.w	gravQuest
+6681,6683d6680
+< deg22.5A	equ	637*22  ; Don't Touch this unless you like seeing planes Pile or move..
+< deg22.5B	equ	1092*22 ; in unusuall directions
+< 
+6686,6687d6682
+< deg67.5A	equ	637*68
+< deg67.5B	equ	1092*68
+6731,6745c6726,6740
+< hologenics_pic	incbin	boot:project2/graphix/hologenics.iff
+< presents_pic	incbin	boot:project2/graphix/presents.iff
+< title_pic	incbin	boot:project2/graphix/title.lbm
+< credits_pic	incbin	boot:project2/graphix/credits.iff
+< credits_pic2	incbin	boot:project2/graphix/credits2.iff
+< menu_pic	incbin	boot:project2/graphix/intro.lbm
+< 
+< sprite_pic	incbin	boot:project2/graphix/sprites4.lbm ; 1st Sprite Pic
+< sprite_pic2	incbin	boot:project2/graphix/sprites5.lbm ; 2nd Sprite Pic
+< sprite_pic3	incbin	boot:project2/graphix/sprites6.lbm ; 3rd Sprite Pic
+< hardware_pic	incbin	boot:project2/graphix/sprites7.lbm ; Hardware Sprite Pic
+< 
+< block_pic	incbin	boot:project2/graphix/background.iff ; Day Background
+< block_pic2	incbin	boot:project2/graphix/background2.iff ; Night BackGround
+< map		incbin	boot:project2/maps/scr3.map ; Sequencial map
+---
+> hologenics_pic	incbin	gfx/hologenics.iff
+> presents_pic	incbin	gfx/presents.iff
+> title_pic	incbin	gfx/title.lbm
+> credits_pic	incbin	gfx/credits.iff
+> credits_pic2	incbin	gfx/credits2.iff
+> menu_pic	incbin	gfx/intro.lbm
+> 
+> sprite_pic	incbin	gfx/sprites4.lbm ; 1st Sprite Pic
+> sprite_pic2	incbin	gfx/sprites5.lbm ; 2nd Sprite Pic
+> sprite_pic3	incbin	gfx/sprites6.lbm ; 3rd Sprite Pic
+> hardware_pic	incbin	gfx/sprites7.lbm ; Hardware Sprite Pic
+> 
+> block_pic	incbin	gfx/background.iff ; Day Background
+> block_pic2	incbin	gfx/background2.iff ; Night BackGround
+> map		incbin	maps/scr3.map ; Sequencial map
